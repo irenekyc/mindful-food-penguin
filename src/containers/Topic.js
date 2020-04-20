@@ -33,7 +33,7 @@ class Topic extends Component {
             this.setState(prevState=>{
                 return{...prevState,
                 topic: this.props.match.params.topic,
-                details: featureDetails[0],
+                details: featureDetails[0].details,
                 dataReady:true,
             }})
 
