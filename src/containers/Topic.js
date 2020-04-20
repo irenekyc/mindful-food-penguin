@@ -30,12 +30,12 @@ class Topic extends Component {
             e.features === this.props.match.params.topic)
             console.log(featureDetails)
 
-            // this.setState(prevState=>{
-            //     return{...prevState,
-            //     topic: this.props.match.params.topic,
-            //     details: featureDetails,
-            //     dataReady:true,
-            // }})
+            this.setState(prevState=>{
+                return{...prevState,
+                topic: this.props.match.params.topic,
+                details: featureDetails[0],
+                dataReady:true,
+            }})
 
 
            
