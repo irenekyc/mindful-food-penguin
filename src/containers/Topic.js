@@ -27,7 +27,7 @@ class Topic extends Component {
             const data = await response.json()
             console.log(data.data)
             const featureDetails = data.data.filter((e)=>
-            e.features === this.props.params.topic)
+            e.features === this.props.match.params.topic)
             console.log(featureDetails)
 
             // this.setState(prevState=>{
