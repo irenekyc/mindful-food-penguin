@@ -23,7 +23,7 @@ class Topic extends Component {
 
         this.fetchData =  async ()=>{
 
-            const response = await fetch(`https://mindful-food-penguin.herokuapp.com/db/data?features=${this.state.topic}`)
+            const response = await fetch(`https://mindful-food-penguin.herokuapp.com/db?features=${this.state.topic}`)
             const data = await response.json()
             const featureDetails = data[0].details
 
