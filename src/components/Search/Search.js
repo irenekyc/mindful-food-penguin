@@ -15,6 +15,7 @@ class Search extends Component {
             url:null,
             vegetarian: false,
             vegan:false,
+            searchError: false
         };
         let queryString = []
         const mindOption = 
@@ -139,20 +140,28 @@ class Search extends Component {
             }           
     }
             this.getData =  async()=>{
+               
                 const response = await fetch(this.state.url)
                 const data = await response.json()
+  
+                if(data.status === "failure"){
+                    return this.setState(prevState=>{
+                       return {...prevState, searchError:true, dataReady:true, url:null}
+
+                })} 
+        
                 const results = data.results
-              
-            
-                this.setState({
-                    dataReady: true, 
-                    url: null, 
-                    searchResults:results,
-                    searchString: " ",
-                    dietOption:" ",
-                    mindOption: " ",
-                })
+                    this.setState({
+                        dataReady: true, 
+                        url: null, 
+                        searchResults:results,
+                        searchString: " ",
+                        dietOption:" ",
+                        mindOption: " ",
+                    })
+                
                 }
+                
                 
     }
 
@@ -171,7 +180,7 @@ class Search extends Component {
                 submit={this.submitHandler}
                 dietOption={this.dietOptionHandler}
                 mindOption={this.mindOptionHandler}/>
-                {this.state.dataReady? <SearchResult data={this.state.searchResults}/> : 
+                {this.state.dataReady? <SearchResult isError={this.state.searchError} data={this.state.searchResults}/> : 
                 <div className={style.emptyContainer}> </div>}
                 
             </div>

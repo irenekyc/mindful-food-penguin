@@ -7,9 +7,6 @@ const fs = require ('fs')
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 
 const databasePath = path.join(__dirname, 'build/assets', 'db.json')
 
@@ -29,4 +26,9 @@ app.get('/db/data', (req, res) => {
         res.send(JSON.parse(data));
     });
 });
+
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
+  
 app.listen(port);

@@ -7,7 +7,8 @@ class features extends Component{
         super(props)
         this.state = {
             dataReady: false,
-            details: null
+            details: null,
+            dataError: false
         }
     this.fetchDetails = async ()=>{
         const response = await fetch ('https://mindful-food-penguin.herokuapp.com/db')

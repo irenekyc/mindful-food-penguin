@@ -11,6 +11,7 @@ class Topic extends Component {
             details: null,
             recipes: null,
             dataReady: false,
+            dataError: false,
             recipeReady: false,
             filterQuery: "",
             options: {
@@ -25,11 +26,9 @@ class Topic extends Component {
 
             const response = await fetch(`https://mindful-food-penguin.herokuapp.com/db/`)
             const data = await response.json()
-            console.log(data.data)
+          
             const featureDetails = data.data.filter((e)=>
             e.features === this.props.match.params.topic)
-            console.log(featureDetails)
-
             this.setState(prevState=>{
                 return{...prevState,
                 topic: this.props.match.params.topic,
@@ -53,6 +52,10 @@ class Topic extends Component {
 
             const response = await fetch(URL)
             const data = await response.json()
+
+            if (data.status === "failure"){
+                return this.setState(prevState=>{ return {...prevState, recipeReady: true, dataError: true}})
+            }
             const recipes = data.results
 
             this.setState(prevState=>{
@@ -113,7 +116,7 @@ class Topic extends Component {
             {this.state.dataReady? 
                 <TopicHeader topic={this.state.topic} details={this.state.details} 
                 filterHandler={this.filterHandler} filterClass={this.state.options}/> :null}
-            {this.state.recipeReady? <SearchResult data={this.state.recipes}/> : 
+            {this.state.recipeReady? <SearchResult isError={this.state.dataError} data={this.state.recipes}/> : 
             <Loading />}
         </div>
            )

@@ -5,17 +5,24 @@ import RecipeCard from './RecipeCard'
 
 
 const searchResult = (props)=>{
-    let searchResult 
-    if (props.data.length > 0){
-        searchResult = true
-    } else  {
-         searchResult = false
+    console.log(props.isError)
+    let searchResult = false
+    if (!props.isError){
+        if (props.data.length > 0){
+            searchResult = true
+        } else  {
+             searchResult = false
+        }
     }
+   
+    
 
 
 return(
     <div className={style.resultContainer}>
-    {searchResult? 
+    {props.isError? 
+        <p> Sorry. Search function is temporarily unavailable </p> 
+    : searchResult?
         props.data.map((result)=>{
         return <RecipeCard data={result}/>
      }) 
