@@ -29,6 +29,7 @@ class Topic extends Component {
           
             const featureDetails = data.data.filter((e)=>
             e.features === this.props.match.params.topic)
+            console.log(featureDetails[0])
             this.setState(prevState=>{
                 return{...prevState,
                 topic: this.props.match.params.topic,
