@@ -21,4 +21,12 @@ app.get('/db', (req, res) => {
         res.send(JSON.parse(data));
     });
 });
+app.get('/db/data', (req, res) => {
+    fs.readFile(databasePath, 'utf8', (err, data) => {
+        if (err) {
+            throw err;
+        }
+        res.send(JSON.parse(data));
+    });
+});
 app.listen(port);

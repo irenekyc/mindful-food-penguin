@@ -23,10 +23,10 @@ class Topic extends Component {
 
         this.fetchData =  async ()=>{
 
-            const response = await fetch(`https://mindful-food-penguin.herokuapp.com/db?features=${this.state.topic}`)
-            const data = await response.json()
-            const featureDetails = data[0].details
-
+            const response = await fetch(`https://mindful-food-penguin.herokuapp.com/db/`)
+            const data = await response.json().data
+            const featureDetails = data.filter((e)=>
+            e.features === this.props.params.topic)
             this.setState(prevState=>{
                 return{...prevState,
                 topic: this.props.match.params.topic,
@@ -47,11 +47,10 @@ class Topic extends Component {
            
             const APIKEY=process.env.REACT_APP_S_API_KEY
             const URL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${APIKEY}&addRecipeNutrition=true&addRecipeInformation=true&sort=healthiness&sort=random${mindQuery}${this.state.filterQuery}&number=9&offet=1`
-            console.log(URL)
+
             const response = await fetch(URL)
             const data = await response.json()
             const recipes = data.results
-            console.log(recipes)
 
             this.setState(prevState=>{
                 return { ... prevState, 
