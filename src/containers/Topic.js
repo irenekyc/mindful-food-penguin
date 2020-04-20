@@ -24,15 +24,18 @@ class Topic extends Component {
         this.fetchData =  async ()=>{
 
             const response = await fetch(`https://mindful-food-penguin.herokuapp.com/db/`)
-            const data = await response.json().data
-            const featureDetails = data.filter((e)=>
+            const data = await response.json()
+            console.log(data.data)
+            const featureDetails = data.data.filter((e)=>
             e.features === this.props.params.topic)
-            this.setState(prevState=>{
-                return{...prevState,
-                topic: this.props.match.params.topic,
-                details: featureDetails,
-                dataReady:true,
-            }})
+            console.log(featureDetails)
+
+            // this.setState(prevState=>{
+            //     return{...prevState,
+            //     topic: this.props.match.params.topic,
+            //     details: featureDetails,
+            //     dataReady:true,
+            // }})
 
 
            
