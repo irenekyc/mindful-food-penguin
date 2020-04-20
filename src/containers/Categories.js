@@ -14,7 +14,7 @@ class categories extends Component {
         }
 
         this.fetchData = async ()=>{
-            const response = await fetch('%PUBLIC_URL%/db')
+            const response = await fetch('%PUBLIC_URL%/assets/db')
             const data = await response.json()
             this.setState({
                 features: data.data,
