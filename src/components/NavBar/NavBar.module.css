@@ -1,0 +1,40 @@
+nav{
+    height: 60px;
+    display: flex;
+    width:100vw;
+    background:#FFE7E2;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:20;
+}
+.LOGO{
+    height:100%;
+    width:50vw;
+    padding: 0 50px;
+
+}
+
+.LOGO img {
+    height:60px;
+   
+}
+nav ul{
+    display:flex;
+    height:100%;
+    width:50vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 75px;
+}
+
+nav ul li{
+    list-style: none;
+    cursor: pointer;
+}
+
+nav a{
+    color:black;
+}

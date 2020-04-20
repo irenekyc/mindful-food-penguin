@@ -1,0 +1,51 @@
+.footerContainer{
+    width:100vw;
+
+    background: #FFE7E2;
+    display:flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 25px 50px;
+}
+
+.footerContainer p{
+    font-size:12px;
+    line-height: 18px;
+}
+
+.socialmedia{
+    height:100%;
+    padding: 0 25px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialmedia span{
+    background: white;
+    border-radius: 15px;
+    padding:10px 15px;
+    margin-left: 25px;
+    margin-right:25px;
+  
+}
+
+.socialmedia span i{
+    font-size:24px;
+    color: #FFE7E2;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.credits{
+    flex:1;
+    text-align: right;
+    height:100%;
+    padding: 0 25px;
+    color:black;
+}
+
+.credits a{
+    color: green;
+}

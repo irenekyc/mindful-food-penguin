@@ -1,0 +1,49 @@
+.topicHeader{
+    padding:50px 8%;
+
+    width:100%;
+
+    text-align:center;
+}
+
+.alignLeft{
+    text-align: left;
+    color: #FFA895;
+
+}
+.topicHeader h1{
+    margin:15px;
+}
+.topicHeader a{
+    color: #FFA895;
+}
+
+
+.filterContainer{
+    padding:10px;
+}
+
+.filter{
+    padding: 5px 15px;
+    border: 1px solid black;
+    cursor: pointer;
+    margin:10px;
+    border-radius: 10px;;
+}
+
+.checkedFilter{
+    background:#FFA895;
+    padding: 5px 15px;
+    border: 1px solid black;
+    color:white;
+    cursor: pointer;
+    margin:10px;
+    border-radius: 10px;;
+}
+
+.topicHeader p{
+    margin: 10px;
+}
+
+
+

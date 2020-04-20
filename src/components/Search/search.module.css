@@ -1,0 +1,227 @@
+.searchSection{
+    padding-top:100px;
+    padding-bottom:25px;
+    width:100%;
+    text-align: center;
+  }
+
+.searchBox{
+    background:white;
+    width:100%;
+    padding: 0 20%;
+}
+
+
+input[type="text"]{
+    width:100%;
+    height:36px;
+    font-size:18px;
+    line-height: 30px;
+    padding:0 10px;
+    outline:none;
+    border:2px solid #FFA895;
+    border-radius: 10px;
+    margin: 10px;
+    color:#453430;
+}
+
+input[type="submit"]{
+    width:150px;
+    height:30px;
+    font-size:18px;
+    line-height:30px;
+    padding:  0 10px;
+    background:#FFA895;
+    border:none;
+    outline:none;
+    cursor: pointer;
+    color:white;
+    border-radius: 10px;;
+}
+
+
+.searchOptions{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+}
+
+.searchOptionsDiet, .searchOptionMind{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap;
+
+}
+.option{
+    padding: 10px 25px;
+ 
+    font-size: 14px
+}
+
+input[type="checkbox"]{
+    visibility: hidden;
+}
+
+label{
+    padding:7px 12px;
+    border: 1px solid #453430;;
+    border-radius: 10px;
+    cursor: pointer;
+    filter: grayscale(50%);
+}
+
+label:hover{
+    background: #FFA895;
+    filter: grayscale(0);
+    color:white;
+    border:none;
+}
+input[type="checkbox"]:checked ~label{
+    background: #FFA895;
+    filter: grayscale(0);
+    color:white;
+    border:none;
+}
+.emptyContainer {
+    width:100%;
+    height:100vh;
+}
+.resultContainer {
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-flow:dense;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.resultCard{
+    min-width:350px;
+    height:500px;
+    margin: 10px;
+    padding:10px;
+    border-radius: 12px;
+    position:relative;
+    overflow: hidden;
+}
+
+.resultCard:nth-child(odd){
+    flex:2;
+
+    
+}
+.resultCard:nth-child(even){
+    flex:1;
+}
+
+
+.resultCardCover{
+    z-index:2;
+    padding-top: 100px;
+    width:100%;
+    height:70%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 5px #FFE7E2;
+    border:3px solid #FFE7E2;
+    border-radius: 15px;
+}
+
+
+.resultCard img{
+    width:220px;
+    height:220px;
+    border-radius: 50%;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:4;
+    border:5px solid #FFE7E2;
+}
+
+.resultCardHide{
+    width:95%;
+    height:40px;
+    position:absolute;
+    bottom:2px;
+    left:2.5%;
+    background:#FFFCFB;
+    transition:1s;
+    padding: 5px  20px;
+    z-index:5;
+}
+.HideTitle{
+    font-size:16px;
+    line-height: 40px;
+    margin-bottom:16px;
+    
+}
+table{
+    border: 2px solid Black;
+    padding: 10px  20px;
+    width:100%;
+
+}
+
+.nutritionRow{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    border-bottom:1px solid black;
+
+}
+.rowTitle{
+    flex:1;
+    text-align: left;
+    font-size:18px;
+}
+
+.rowRight{
+    text-align: right;
+}
+.resultCardHide:hover{
+    height:60%;
+}
+
+.Bold{
+    font-size:18px;
+    font-weight:800;
+    letter-spacing: 1px;
+    font-style:italic;
+}
+.details{
+    height:20px;
+    font-size:14px;
+}
+.details a{
+    color: black;
+}
+.strong{
+    font-weight: 700;
+    font-size:16px;
+}
+.recipeLabels{
+    padding:10px 0;
+    padding-bottom:40px;
+    display:flex;
+    flex-wrap: wrap;
+}
+.recipeLabels span{
+    padding:5px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size:12px;
+    margin-right:5px;
+}
+

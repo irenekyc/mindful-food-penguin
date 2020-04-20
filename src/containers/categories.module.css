@@ -1,0 +1,11 @@
+.categoriesPageHead{
+    width:100vw;
+    height:140vh;
+    padding: 0 8%;
+    padding-top:70px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+
