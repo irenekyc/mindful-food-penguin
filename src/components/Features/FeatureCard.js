@@ -3,6 +3,7 @@ import style from './feature.module.css'
 import {Link } from 'react-router-dom'
 
 const featureCard =(props)=>{
+    console.log(process.env.REACT_APP_S_API_KEY)
 
 
     return(
