@@ -1,8 +1,6 @@
 .topicHeader{
-    padding:50px 8%;
-
+    padding:50px 4%;
     width:100%;
-
     text-align:center;
 }
 
@@ -20,15 +18,19 @@
 
 
 .filterContainer{
-    padding:10px;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap
 }
-
+.filterContainer span{
+    padding:5px;
+}
 .filter{
-    padding: 5px 15px;
     border: 1px solid black;
     cursor: pointer;
-    margin:10px;
-    border-radius: 10px;;
+    border-radius: 10px;
+    font-size:12px;
+    padding:5px;
 }
 
 .checkedFilter{
@@ -47,3 +49,19 @@
 
 
 
+@media only screen and (min-width:900px){
+    .topicHeader{
+        padding:50px 8%;
+    }
+    .filter{
+        padding: 10px 25px;}
+    
+}
+
+@media only screen and (min-width:500px){
+    .filter{
+        padding: 5px 15px;
+        margin:10px;}
+
+    
+}

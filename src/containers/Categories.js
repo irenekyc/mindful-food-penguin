@@ -46,7 +46,7 @@ class categories extends Component {
                 {this.state.dataReady?
                    <div className={style.categoriesPageHead}>
                     {this.state.features.map((feature)=>{
-                        return  <FeaturePage data={feature}/> 
+                        return  <FeaturePage key={feature.details.id}data={feature}/> 
                     })}
                 </div> : <Loading />}
         

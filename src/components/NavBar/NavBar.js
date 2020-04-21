@@ -15,6 +15,7 @@ const navBar = ()=>{
                    <a href="#about-section"> <li>  About </li></a>
                     <li><Link to="/search" >Search</Link></li>    
             </ul>
+            <div className={style.searchBTN_mobileOnly}><Link to ="/search"><i class="fas fa-search"></i></Link></div>
         </nav>
 
         

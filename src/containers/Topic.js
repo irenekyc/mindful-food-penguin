@@ -29,7 +29,6 @@ class Topic extends Component {
           
             const featureDetails = data.data.filter((e)=>
             e.features === this.props.match.params.topic)
-            console.log(featureDetails[0])
             this.setState(prevState=>{
                 return{...prevState,
                 topic: this.props.match.params.topic,
@@ -60,7 +59,7 @@ class Topic extends Component {
             const recipes = data.results
 
             this.setState(prevState=>{
-                return { ... prevState, 
+                return {...prevState, 
                     recipes: recipes,
                     recipeReady: true
                 }
@@ -72,7 +71,7 @@ class Topic extends Component {
             const option = e.target.id
             const oldStateOptions = this.state.options
             Object.keys(oldStateOptions).map((key)=>{
-                if (key===option){
+             if (key===option){
                     oldStateOptions[key]? oldStateOptions[key]=false : oldStateOptions[key]=true
                 }
             })
@@ -92,7 +91,6 @@ class Topic extends Component {
                 }
             })
         }
-
     }
 
 
@@ -107,8 +105,6 @@ class Topic extends Component {
             this.fetchRecipe()
         }
     }
-
-  
 
     render(){
 

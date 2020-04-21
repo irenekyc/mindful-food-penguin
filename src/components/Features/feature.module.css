@@ -11,7 +11,7 @@
 .FeatureDiv{
     display: flex;
     flex-wrap:wrap;
-    flex-direction: row;
+    flex-direction: column;
     flex-flow:dense;
     /* grid-template-columns: repeat( auto-fill, minmax(375px, 1fr) );
     grid-template-rows: repeat(auto-fill, 200px); */
@@ -22,37 +22,18 @@
 
 .featureCard{
     position:relative;
-    min-width:550px;
+    width:100%;
     overflow: hidden;
     margin:0;
     filter: grayscale(80%);
     transition: 1s;
     cursor: pointer;
+    flex:1;
 }
 .featureCard:hover{
     filter:grayscale(0)
 }
 
-.featureCard:nth-child(1){
-    flex:2;
-
-}
-.featureCard:nth-child(4){
-    flex:2;
-}
-
-.featureCard:nth-child(2){
-    flex:1;
-}
-.featureCard:nth-child(6){
-    flex:1;
-}
-.featureCard:nth-child(3){
-    flex:1;
-}
-.featureCard:nth-child(5){
-    flex:2;
-}
 
 
 .featuredCardBG{
@@ -87,4 +68,35 @@
     letter-spacing: 2px;
     font-weight:900;
     text-shadow: 1px 1px  gray;
+}
+
+@media only screen and (min-width:1101px){
+    .FeatureDiv{
+        flex-direction: row;;
+    }
+    .featureCard{
+        min-width:550px;
+    }
+
+    .featureCard:nth-child(1){
+        flex:2;
+
+    }
+    .featureCard:nth-child(4){
+        flex:2;
+    }
+
+    .featureCard:nth-child(2){
+        flex:1;
+    }
+    .featureCard:nth-child(6){
+        flex:1;
+    }
+    .featureCard:nth-child(3){
+        flex:1;
+    }
+    .featureCard:nth-child(5){
+        flex:2;
+    }
+
 }

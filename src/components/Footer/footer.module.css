@@ -8,6 +8,19 @@
     padding: 25px 50px;
 }
 
+@media only screen and (max-width:768px){
+    .footerContainer{
+        flex-direction: column;
+    }
+    .credits{
+        text-align: left;
+    }
+}
+@media only screen and (min-width:780px){
+    .credits{
+        text-align: right;
+    }
+}
 .footerContainer p{
     font-size:12px;
     line-height: 18px;
@@ -15,7 +28,7 @@
 
 .socialmedia{
     height:100%;
-    padding: 0 25px;
+    padding: 25px;
     text-align: left;
     display: flex;
     justify-content: center;
@@ -40,7 +53,6 @@
 
 .credits{
     flex:1;
-    text-align: right;
     height:100%;
     padding: 0 25px;
     color:black;

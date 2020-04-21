@@ -34,7 +34,7 @@ class features extends Component{
                 <div className={style.FeatureDiv}>
                     {this.state.dataReady? 
                         this.state.details.map((feature)=>{ 
-                        return <FeatureCard topic={feature}/> }) :null}
+                        return <FeatureCard key ={feature.details.id} topic={feature}/> }) :null}
              
                 </div>
             </section>

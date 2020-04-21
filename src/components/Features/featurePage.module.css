@@ -17,7 +17,7 @@
 }
 
 .featurePageCard:hover{
-    flex:10;
+    flex:8;
     filter:grayscale(10%);
     opacity:1;
 }
@@ -29,31 +29,71 @@
     width:100%;
     height:80%;
     text-align: center;
-    padding: 0 50px;
+    padding: 0 20px;
 
 }
 
 .featureTitle{
-    font-size:50px;
+    font-size:36px;
     font-weight: 700;
-    line-height: 100px;
+    line-height: 50px;
     color:white;
     text-transform: uppercase;
 }
 .featureInfo p{
     background: rgba(255,255,255, 0.6);
-    padding: 15px 25px;
+    padding: 5px 15px;
+    font-size:12px;
 }
 
 .btn{
     cursor: pointer;
-    font-size:24px;
-    padding:10px 25px;
+    font-size:18px;
     border: 5px solid white;;
-    width:200px;
-    margin:10px;
+    width:100%;
     background: rgba(255,255,255,0.6);
     border-radius:15px;
     outline:none;
+
+}
+
+@media only screen and (min-width:766px){
+    .featurePageCard:hover{
+        flex:8;
+    }
+
+    .featureTitle{
+        font-size:50px;
+        font-weight: 700;
+        line-height: 100px;
+        color:white;
+        text-transform: uppercase;
+    }
+    .featureInfo{
+        padding: 0 50px;
+    
+    }
+    .featureInfo p{
+        padding: 15px 25px;
+        font-size:16px;
+    }
+
+    .btn{
+        width:200px;
+        margin:10px;
+    }
+}
+
+@media only screen and (min-width:1000px){
+    .featurePageCard:hover{
+        flex:10;
+    }
+
+  
+    .featureInfo p{
+   
+        font-size:18px;
+    }
+
 
 }

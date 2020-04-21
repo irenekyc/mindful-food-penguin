@@ -1,4 +1,22 @@
+@media only screen and (min-width:766px){
+    .HEROcontent h1{
+        font-size:2.5rem;
+        line-height: 5rem;
+   
+    }
+    .HEROcontent{
+        padding:30px;
+        height:50%;
+    }
 
+}
+
+@media only screen and (min-width:900px){
+    .HEROcontent h1{
+        font-size:3.5rem;
+        line-height: 5rem;
+    }
+}
 
 .HEROBG{
     background:url('/images/mindfulnessEating.jpg');
@@ -17,19 +35,20 @@
     left:0;
     transform: translateY(-50%);
     width:100%;
-    height:50%;
+    height:60%;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     text-align: center;
     color: white;
-    background: rgba(0,0,0,0.2)
+    background: rgba(0,0,0,0.2);
+    padding:15px;
 }
 
-h1{
-    font-size:2.5rem;
-    line-height: 5rem;
+.HEROcontent h1{
+    font-size:2rem;
+    line-height: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-style: italic;

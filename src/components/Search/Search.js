@@ -58,7 +58,7 @@ class Search extends Component {
                 }
             ]
 
-        let mindOptions
+
         
         let dietOption = {
             vegetarian: false,

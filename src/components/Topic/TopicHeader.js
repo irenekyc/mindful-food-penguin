@@ -11,9 +11,9 @@ const topicHeader = (props)=>{
           <p> {props.details.excerpt}</p>
           <p> Suggested Daily Intake: {props.details.dailyIntake}</p>
           <div className={style.filterContainer}> 
-          Filter :
+          <span>Filter :</span>
           {Object.keys(props.filterClass).map((key)=>{
-           return <span className={props.filterClass[key]? style.checkedFilter : style.filter} id={key} onClick={props.filterHandler}> 
+           return <span className={props.filterClass[key]? style.checkedFilter : style.filter} id={key} key={key} onClick={props.filterHandler}> 
                 {key.toLocaleUpperCase()} </span> 
           })}
          

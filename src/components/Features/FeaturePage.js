@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 const featurePageCard = (props)=>{
-    console.log(props.data)
+
     return(
         <div className={style.featurePageCard}>
             <img src={props.data.details.img} alt={props.data.features}/>
