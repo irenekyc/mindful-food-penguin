@@ -48,14 +48,14 @@ const SearchBox = ({ confirmedOptions }) => {
         <div className={style.searchOptionsDiet}>
           {dietOptions.map((option) => {
             return (
-              <div className={style.option}>
+              <div className={style.option} key={option.searchvalue}>
                 <input
                   type="checkbox"
                   id={option.searchvalue}
                   name={option.option}
                   onClick={onClickDietOptionHandler}
                 />
-                <label for={option.searchvalue}>{option.option}</label>
+                <label htmlFor={option.searchvalue}>{option.option}</label>
               </div>
             );
           })}
@@ -64,7 +64,7 @@ const SearchBox = ({ confirmedOptions }) => {
         <div className={style.searchOptionMind}>
           {mindOptions.map((option) => {
             return (
-              <div className={style.option}>
+              <div className={style.option} key={option.searchvalue}>
                 <input
                   type="checkbox"
                   id={option.searchvalue}

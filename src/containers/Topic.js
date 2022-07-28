@@ -72,7 +72,7 @@ class Topic extends Component {
       //apply filter
       const option = e.target.id;
       const oldStateOptions = this.state.options;
-      Object.keys(oldStateOptions).map((key) => {
+      Object.keys(oldStateOptions).forEach((key) => {
         if (key === option) {
           oldStateOptions[key]
             ? (oldStateOptions[key] = false)

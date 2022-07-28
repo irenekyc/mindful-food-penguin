@@ -1,26 +1,35 @@
-import React from 'react'
-import style from './NavBar.module.css'
-import { Link } from 'react-router-dom'
+import React from "react";
+import style from "./NavBar.module.css";
+import { Link } from "react-router-dom";
 
+const navBar = () => {
+  return (
+    <nav>
+      <div className={style.LOGO}>
+        {" "}
+        <Link to="/">
+          <img src="/images/logo-100.png" alt="Mindful food penguin" />
+        </Link>
+      </div>
+      <ul>
+        <li>
+          <Link to="/categories">Mind your diet</Link>{" "}
+        </li>
+        <a href="#about-section">
+          {" "}
+          <li> About </li>
+        </a>
+        <li>
+          <Link to="/search">Search</Link>
+        </li>
+      </ul>
+      <div className={style.searchBTN_mobileOnly}>
+        <Link to="/search">
+          <i className="fas fa-search"></i>
+        </Link>
+      </div>
+    </nav>
+  );
+};
 
-const navBar = ()=>{
-
-    return(
-
-        <nav>
-            <div className={style.LOGO}> <Link to="/"><img src="/images/logo-100.png" alt="Mindful food penguin" /></Link></div>
-            <ul>
-                <li> 
-                    <Link to="/categories">Mind your diet</Link> </li>
-                   <a href="#about-section"> <li>  About </li></a>
-                    <li><Link to="/search" >Search</Link></li>    
-            </ul>
-            <div className={style.searchBTN_mobileOnly}><Link to ="/search"><i class="fas fa-search"></i></Link></div>
-        </nav>
-
-        
-    )
-
-}
-
-export default navBar
+export default navBar;
